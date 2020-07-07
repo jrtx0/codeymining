@@ -7,8 +7,8 @@ import random
 
 
 # 根据你的用户名和密码修改相应位置的值
-username = 'JRTx'
-password = '19960321'
+username = '####'
+password = '####'
 loginurl = 'https://bbs.codedy.com/member.php?mod=logging&action=login&loginsubmit=yes&loginhash=LAX1v&inajax=1'
 minerurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner'
 checkurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=draw&formhash=d9d2a125&t=0.33848210890214014'

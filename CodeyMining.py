@@ -11,6 +11,7 @@ username = '####'
 password = '####'
 loginurl = 'https://bbs.codedy.com/member.php?mod=logging&action=login&loginsubmit=yes&loginhash=LAX1v&inajax=1'
 minerurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner'
+mainurl = 'https://bbs.codedy.com/forum.php'
 checkurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=draw&formhash=d9d2a125&t=0.33848210890214014'
 
 # 这行代码是用来维持cookie的，你后续操作都不用担心cookie，他会自动带上相应的cookie
@@ -19,7 +20,7 @@ s = requests.Session()
 loginparams = {'username':username, 'password':password}
 # post数据实现登录
 s.post(loginurl, data = loginparams)
-
+r = s.get(mainurl)
 formhash = re.search(r'<input type="hidden" name="formhash" value="(.+?)" />', r.text).group(1)
 t = random.random()
 checkurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=draw&formhash=' + formhash + '&t=' + str(t)

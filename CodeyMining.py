@@ -19,15 +19,15 @@ def extract_formhash():
 
 def join_checkurl():
     t = random.random()
-    checkurl = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=draw&formhash=' +\
+    url = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=draw&formhash=' +\
                extract_formhash() + '&t=' + str(t)
-    return checkurl
+    return url
 
 def join_signurl():
     t = random.random()
-    signurl = 'https://bbs.codedy.com/plugin.php?id=k_misign:sign&operation=qiandao&formhash=' +\
+    url = 'https://bbs.codedy.com/plugin.php?id=k_misign:sign&operation=qiandao&formhash=' +\
               extract_formhash() + '&format=empty&inajax=1&ajaxtarget=JD_sign'
-    return signurl
+    return url
 
 def main():
     # 这行代码是用来维持cookie的，你后续操作都不用担心cookie，他会自动带上相应的cookie

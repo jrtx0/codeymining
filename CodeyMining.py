@@ -36,8 +36,12 @@ def main():
     # 带表单的参数
     login_params = {'username': username, 'password': password}
     session.post(login_url, login_params)
+    time.sleep(2)
+
     # 每日签到
     session.post(join_signurl())
+    time.sleep(2)
+
     # 收取挖矿收益
     session.post(join_checkurl())
 

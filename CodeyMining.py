@@ -24,9 +24,14 @@ def join_checkurl():
     return url
 
 def join_signurl():
-    t = random.random()
     url = 'https://bbs.codedy.com/plugin.php?id=k_misign:sign&operation=qiandao&formhash=' +\
               extract_formhash() + '&format=empty&inajax=1&ajaxtarget=JD_sign'
+    return url
+
+def join_refresh():
+    t = random.random()
+    url = 'https://bbs.codedy.com/plugin.php?id=hux_miner:hux_miner&ac=re&formhash=' +\
+            extract_formhash() + '&t=' + str(t)
     return url
 
 def main():
@@ -40,6 +45,10 @@ def main():
 
     # 每日签到
     session.post(join_signurl())
+    time.sleep(2)
+
+    # 刷新挖矿收益
+    session.post(join_refresh())
     time.sleep(2)
 
     # 收取挖矿收益

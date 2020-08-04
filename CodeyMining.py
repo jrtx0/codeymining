@@ -45,6 +45,9 @@ def main():
     # 收取挖矿收益
     session.post(join_checkurl())
 
+    # 清除 cookies
+    session.cookies.clear()
+
 if __name__ == '__main__':
     main()
 
